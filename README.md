@@ -28,6 +28,8 @@ Per chi utilizza boot2docker:
 Per eseguire soltanto i test JUnit è possibile invece lanciare lo script
 <pre>./test-server</pre>
 
+NOTA: Se Cassandra non è ancora completamente avviato, l'avvio del sistema potrebbe fallire. Per risolvere il problema è necessario semplicemente riavviare il sistema con il comando del punto 6.
+
 ###Accesso al client
 
 Per accedere al client inserire questo indirizzo nel proprio browser:
