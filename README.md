@@ -1,4 +1,4 @@
-# docker-test
+# docker-shortify.me
 Per chi utilizza boot2docker:
  - Aprire VirtualBox
  - Entrare nelle impostazioni di rete della virtual machine
