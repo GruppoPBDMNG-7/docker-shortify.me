@@ -1,11 +1,7 @@
 FROM cassandra:latest
 
 #ports
-EXPOSE 4040
 EXPOSE 4567
-EXPOSE 8042
-EXPOSE 9042
-EXPOSE 9160
 
 #Get repositories for java8
 RUN echo "deb http://ppa.launchpad.net/webupd8team/java/ubuntu trusty main" | tee /etc/apt/sources.list.d/webupd8team-java.list
@@ -29,7 +25,15 @@ RUN git clone https://github.com/GruppoPBDMNG-7/shortify.me
 #move the client files to the root
 RUN mv /shortify.me/ClientAngular /
 
-#compile the source and generate the jar file
-WORKDIR "/shortify.me/ServerJava"
-RUN mvn package
+#create the start server file and make it executable
+RUN echo '#!/bin/bash' >> /start-server
+RUN echo 'cd /shortify.me/ServerJava' >> /start-server
+RUN echo 'mvn package' >> /start-server
+RUN echo 'java -jar target/shortify.me.jar' >> /start-server
+RUN chmod 755 /start-server
 
+#create a test script and make it executable
+RUN echo '#!/bin/bash' >> /test-server
+RUN echo 'cd /shortify.me/ServerJava' >> /test-server
+RUN echo 'mvn test' >> /test-server
+RUN chmod 755 /test-server
