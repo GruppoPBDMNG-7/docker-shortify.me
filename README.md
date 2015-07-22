@@ -1,4 +1,6 @@
 # docker-shortify.me
+
+###Guida all'installazione
 Per chi utilizza boot2docker:
  - Aprire VirtualBox
  - Entrare nelle impostazioni di rete della virtual machine
@@ -25,6 +27,8 @@ Per chi utilizza boot2docker:
 
 Per eseguire soltanto i test JUnit è possibile invece lanciare lo script
 <pre>./test-server</pre>
+
+###Accesso al client
 
 Per accedere al client inserire questo indirizzo nel proprio browser:
 <pre>localhost:4567</pre>
