@@ -25,3 +25,6 @@ Per chi utilizza boot2docker:
 
 Per eseguire soltanto i test JUnit è possibile invece lanciare lo script
 <pre>./test-server</pre>
+
+Per accedere al client inserire questo indirizzo nel proprio browser:
+<pre>localhost:4567</pre>
